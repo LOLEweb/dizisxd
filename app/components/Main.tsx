@@ -6,6 +6,8 @@ import { Tooltip as ReactTooltip } from 'react-tooltip'
 import Spotik from './Spotik';
 import { DiscordStatus, Root } from './lanyard-data.interface';
 import axios from 'axios';
+import Link from 'next/link';
+
 
 const status = (status:DiscordStatus | undefined) => {
 switch (status) {
@@ -55,7 +57,11 @@ const [data, setData] = useState<Root>()
               <p>I m a software/web developer from Russia who s <Tooltip placement='top' hasArrow
                   label={fractionOfYear.toFixed(6)}><span>17 years old</span></Tooltip> and has been coding for over <span>2 years</span>.
               </p>
-              <p>You can find more info in <a className=' font-semibold' href="#">/about</a>.</p>
+              <p>You can find more info in 
+                
+                  <a className=' font-semibold'>/about</a>
+                
+              .</p>
               {/*
               <Track /> */}
             </div>

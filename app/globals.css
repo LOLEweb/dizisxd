@@ -87,7 +87,7 @@ p>a:hover {
   height: 55px;
   transition: border .5s ease-in, background-color .5s ease-in;
   border-radius: 50%;
-  border: 10px solid #232323;
+  border: 10px solid #1a202c;
 }
 
 .circle__pos {
