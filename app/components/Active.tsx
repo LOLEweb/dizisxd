@@ -33,24 +33,27 @@ const Active = () => {
             <div
                 className='bg-[#141821] flex items-center sm:flex-row flex-col rounded-[10px] p-3 mt-4 duration-300'>
                 <div className='rounded-[10px] bg-[#141414] relative'>
+                    
                     {data?.data.activities[0] ?
-                    <Tooltip label={`${data?.data.activities[0].assets.large_text}`} placement='top' hasArrow>
+                    // <Tooltip label={`${data?.data.activities[0].assets.large_text}`} placement='top' hasArrow>
                         <Image className='rounded-[10px] sm:w-[100px] w-full' width={100} height={100} alt='img'
                         src={`https://cdn.discordapp.com/app-assets/383226320970055681/${data?.data.activities[0].assets.large_image}.png`} />
-                    </Tooltip>
-                    :
-                    <Tooltip label='No activity' placement='top' hasArrow><Image className='rounded-[10px]' width={100} height={100} alt='img' src={notAlbum} /></Tooltip>
+                    //</Tooltip>
+                    
+                    :<Tooltip label='No activity' placement='top' hasArrow><Image className='rounded-[10px]' width={100} height={100} alt='img' src={notAlbum} /></Tooltip>
                     
                     }
 
-                    {data?.data.activities[0] ?
+                    
+
+                    {/* {data?.data.activities[0] ?
                     <Tooltip label={`${data?.data.activities[0].assets.small_text}`} placement='top' hasArrow>
                         <Image className='active active__pos w-full' width={100} height={100} alt='img'
                         src={`https://cdn.discordapp.com/app-assets/383226320970055681/${data?.data.activities[0].assets.small_image}.png`} />
                     </Tooltip>
                     :
                     undefined
-                    }
+                    } */}
                     
                 </div>
                 <div className='px-4 py-2'>
