@@ -39,7 +39,8 @@ const Active = () => {
                         src={`https://cdn.discordapp.com/app-assets/383226320970055681/${data?.data.activities[0].assets.large_image}.png`} />
                     </Tooltip>
                     :
-                    <Image className='rounded-[10px]' width={100} height={100} alt='img' src={notAlbum} />
+                    <Tooltip label='No activity' placement='top' hasArrow><Image className='rounded-[10px]' width={100} height={100} alt='img' src={notAlbum} /></Tooltip>
+                    
                     }
 
                     {data?.data.activities[0] ?
