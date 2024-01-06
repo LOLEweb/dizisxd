@@ -54,7 +54,6 @@ const [data, setData] = useState<Root>()
                 : data?.data.active_on_discord_mobile ? <div className={`phone phone__pos ${status(data?.data.discord_status)} w-10 h-10`}></div>
                 : <div className={`circle circle__pos ${status(data?.data.discord_status)}`}></div>
                 }
-                
               </Tooltip>
             </div>
 
@@ -79,5 +78,9 @@ const [data, setData] = useState<Root>()
     </>
     )
     }
+// ?если актив есть, то он появляется
+
+// :иначе пустая картинка
+//     
 
     export default Main

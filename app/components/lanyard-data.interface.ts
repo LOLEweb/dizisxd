@@ -48,7 +48,7 @@ export interface DiscordUser {
 export interface Activity {
   flags: number
   id: string
-  name: string
+  name: any
   type: number
   state: string
   session_id: string
