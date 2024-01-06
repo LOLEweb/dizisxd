@@ -90,6 +90,18 @@ p>a:hover {
   border: 10px solid #1a202c;
 }
 
+.active {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+.active__pos {
+  position: absolute;
+  right: -5px;
+  bottom: -5px;
+}
+
 .circle__pos {
   position: absolute;
   right: 20px;

@@ -7,6 +7,7 @@ import Spotik from './Spotik';
 import { DiscordStatus, Root } from './lanyard-data.interface';
 import axios from 'axios';
 import Link from 'next/link';
+import Active from './Active';
 
 
 const status = (status:DiscordStatus | undefined) => {
@@ -68,11 +69,11 @@ const [data, setData] = useState<Root>()
                   <a className=' font-semibold'>/about</a>
                 
               .</p>
-              {/*
-              <Track /> */}
+              
             </div>
           </div>
-          <Spotik />
+          {/* <Spotik /> */}
+          <Active />
         </div>
       </main>
     </>
