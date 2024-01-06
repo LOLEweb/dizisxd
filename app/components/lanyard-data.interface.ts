@@ -66,6 +66,8 @@ export interface Timestamps2 {
 }
 
 export interface Assets {
+  small_text: any
+  small_image: any
   large_image: string
   large_text: string
 }

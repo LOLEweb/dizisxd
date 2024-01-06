@@ -21,6 +21,11 @@ const Active = () => {
         }
         asyncFunc()
     }, [])
+
+    const date = new Date(1704556825272)
+    const timestamp = new Date()
+
+    
     
     return ( 
         
@@ -53,7 +58,6 @@ const Active = () => {
                 }
                     {data?.data.activities[0].details ? <p>{data?.data.activities[0].details}</p> : undefined}
                     {data?.data.activities[0].state ? <p>{data?.data.activities[0].state}</p> : undefined}
-                    <p>{}</p>
                 </div>
             </div>
         </>
