@@ -48,7 +48,13 @@ const [data, setData] = useState<Root>()
 
             <div className="relative text-center mb-5">
               <img src={'https://avatars.githubusercontent.com/u/125983594?v=4'} alt="avatar" className="main__image" />
-              <Tooltip label='Discord status' placement='bottom' closeDelay={300} hasArrow bg='black'><div className={`circle circle__pos ${status(data?.data.discord_status)}`}></div></Tooltip>
+              <Tooltip label='Discord status' placement='bottom' closeDelay={300} hasArrow bg='black'>
+                {data?.data.active_on_discord_desktop ? <div className={`circle circle__pos ${status(data?.data.discord_status)}`}></div>
+                : data?.data.active_on_discord_mobile ? <div className={`phone phone__pos ${status(data?.data.discord_status)} w-10 h-10`}></div>
+                : <div className={`circle circle__pos ${status(data?.data.discord_status)}`}></div>
+                }
+                
+              </Tooltip>
             </div>
 
             <h2 className=' text-3xl md:text-4xl font-bold'>Hello👋</h2>
