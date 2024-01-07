@@ -78,7 +78,7 @@ const [data, setData] = useState <Root> ()
                     }
                     {data?.data.activities[0] ? <p>{data?.data.activities[0].details}</p> : undefined}
                     {data?.data.activities[0] ? <p>{data?.data.activities[0].state}</p> : undefined}
-                    {data?.data.activities[0] ? <p>Elapsed: {finalTime}</p> : undefined}
+                    {/* {data?.data.activities[0] ? <p>Elapsed: {finalTime}</p> : undefined} */}
 
                 </div>
             </div>
