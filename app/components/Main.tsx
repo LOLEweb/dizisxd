@@ -50,8 +50,10 @@ const [data, setData] = useState<Root>()
             <div className="relative text-center mb-5">
               <img src={'https://avatars.githubusercontent.com/u/125983594?v=4'} alt="avatar" className="main__image" />
               <Tooltip label='Discord status' placement='bottom' closeDelay={300} hasArrow bg='black'>
-                {data?.data.active_on_discord_desktop ? <div className={`circle circle__pos ${status(data?.data.discord_status)}`}></div>
-                : data?.data.active_on_discord_mobile ? <div className={`phone phone__pos ${status(data?.data.discord_status)} w-10 h-10`}></div>
+                {data?.data.active_on_discord_desktop ? <div className={`circle circle__pos
+                  ${status(data?.data.discord_status)}`}></div>
+                : data?.data.active_on_discord_mobile ? <div className={`phone phone__pos
+                  ${status(data?.data.discord_status)} w-10 h-10`}></div>
                 : <div className={`circle circle__pos ${status(data?.data.discord_status)}`}></div>
                 }
               </Tooltip>
@@ -63,24 +65,22 @@ const [data, setData] = useState<Root>()
               <p>I m a software/web developer from Russia who s <Tooltip placement='top' hasArrow
                   label={fractionOfYear.toFixed(6)}><span>17 years old</span></Tooltip> and has been coding for over <span>2 years</span>.
               </p>
-              <p>You can find more info in 
-                
-                  <a className=' font-semibold'>/about</a>
-                
-              .</p>
-              
+              <p>You can find more info in <a className=' font-semibold cursor-pointer'>/about</a>.
+              </p>
+
             </div>
           </div>
-          {/* <Spotik /> */}
+          {/*
+          <Spotik /> */}
           <Active />
         </div>
       </main>
     </>
     )
     }
-// ?если актив есть, то он появляется
+    // ?если актив есть, то он появляется
 
-// :иначе пустая картинка
-//     
+    // :иначе пустая картинка
+    //
 
     export default Main
