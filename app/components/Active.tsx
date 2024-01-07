@@ -25,7 +25,7 @@ const Active = () => {
     const date = new Date(1704556825272)
     const timestamp = new Date()
 
-    
+    console.log(data)
     
     return ( 
         
@@ -57,11 +57,11 @@ const Active = () => {
                     
                 </div>
                 <div className='px-4 py-2'>
-                    {data?.data.activities[0].name ? <h3 className=' text-lg font-bold'>{data?.data.activities[0].name}</h3>
+                    {data?.data.activities[0] ? <h3 className=' text-lg font-bold'>{data?.data.activities[0].name}</h3>
                     : <h3 className=' text-lg font-bold'>No activity 😴</h3>
                 }
-                    {data?.data.activities[0].details ? <p>{data?.data.activities[0].details}</p> : undefined}
-                    {data?.data.activities[0].state ? <p>{data?.data.activities[0].state}</p> : undefined}
+                    {data?.data.activities[0] ? <p>{data?.data.activities[0].details}</p> : undefined}
+                    {data?.data.activities[0] ? <p>{data?.data.activities[0].state}</p> : undefined}
                 </div>
             </div>
         </>
