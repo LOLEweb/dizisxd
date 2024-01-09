@@ -80,14 +80,8 @@ p>a:hover {
 .main__image {
     width: 280px;
     border-radius: 50%;
-}
-
-.circle {
-  width: 55px;
-  height: 55px;
-  transition: border .5s ease-in, background-color .5s ease-in;
-  border-radius: 50%;
-  border: 10px solid #1a202c;
+    
+    
 }
 
 .active {
@@ -102,11 +96,7 @@ p>a:hover {
   bottom: -5px;
 }
 
-.circle__pos {
-  position: absolute;
-  right: 20px;
-  bottom: 15px;
-}
+
 
 .phone {
   width: 50px;
