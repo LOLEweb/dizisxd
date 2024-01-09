@@ -25,9 +25,9 @@ const Active:FC<{activity:Activity}> = (props) => {
         const date = new Date(time);
         const now = new Date();
 
-        let hours = now.getHours();
-        let minutes = now.getMinutes();
-        let seconds = now.getSeconds();
+        let hours:any = now.getHours();
+        let minutes:any = now.getMinutes();
+        let seconds:any = now.getSeconds();
 
         const startTime = date.getHours() * 3600 + date.getMinutes() * 60 + date.getSeconds();
         const currentTime = hours * 3600 + minutes * 60 + seconds;
@@ -35,15 +35,22 @@ const Active:FC<{activity:Activity}> = (props) => {
 
         if (elapsedTime < 0) { elapsedTime +=24 * 3600; }
          hours=Math.floor(elapsedTime / 3600); 
-         minutes=Math.floor((elapsedTime % 3600) /60); 
+         minutes=Math.floor((elapsedTime % 3600) /60);
          seconds=elapsedTime % 60; 
+         seconds = seconds < 10 ? "0" + seconds : seconds;
+         minutes = minutes < 10 ? "0" + minutes : minutes;
+         hours = hours < 10 ? "0" + hours : hours;
+
+
+         
          const finalTime=hours + ':' + minutes + ':' + seconds;
+  
             
             return ( 
             <>
             {props.activity ? <p className=" uppercase text-gray-600 pl-2 pb-2 font-bold">Playing a game</p> : undefined}
             <div
-                className='flex items-center sm:flex-row cursor-pointer w-full mb-3'>
+                className='flex items-center sm:flex-row cursor-pointer w-full mb-3 sm:px-0 px-2'>
                 <div className='rounded-[10px] bg-[#141414] relative'>
                     
                     {props.activity && props.activity.assets
@@ -63,7 +70,7 @@ const Active:FC<{activity:Activity}> = (props) => {
                     {props.activity && props.activity.assets
                     ? (props.activity.assets.small_text
                         ?<Tooltip label={`${props.activity.assets.small_text}`} placement='top' hasArrow>
-                        <Image className='active active__pos w-full' width={100} height={100} alt='img'
+                        <Image className='active active__pos w-full ' width={100} height={100} alt='img'
                             src={`https://cdn.discordapp.com/app-assets/383226320970055681/${props.activity.assets.small_image}.png`} />
                     </Tooltip>
                     : <Image className='active active__pos w-full' width={100} height={100} alt='img'

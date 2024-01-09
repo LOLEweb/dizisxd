@@ -32,27 +32,26 @@ const Main = () => {
 
 
   useEffect(() => {
-    
+    // setLoading(true)
     const asyncFunc = async () => {
       const data = await axios.get<Root>(
         "https://api.lanyard.rest/v1/users/835837384297545748"
       );
       setData(data.data);
-      
+      // setLoading(false)
     };
     asyncFunc();
   }, []);
 
   const birthDate = new Date("2006-04-22"); // Предположим, что это твоя дата рождения\
   const currentDate = new Date();
-  const mill = currentDate.getMilliseconds();
   const ageInYears = currentDate.getFullYear() - birthDate.getFullYear();
   const monthsPassed = currentDate.getMonth() - birthDate.getMonth();
   const fractionOfYear = ageInYears + monthsPassed / 12;
 
 
   
-
+// {isLoading && 'Loading....'}
   return (
     <>
       <main className="text-white flex flex-grow py-5">
@@ -99,7 +98,7 @@ const Main = () => {
             </div>
           </div>
           <div className="bg-[#141821] rounded-[10px] p-3 mt-3 w-full sm:max-w-[500px]">
-            {data?.data.activities && <Activities activities={data?.data.activities} /> }
+            {data?.data.activities ? <Activities activities={data?.data.activities}/> : <Spotik />}
           </div>
           
           
