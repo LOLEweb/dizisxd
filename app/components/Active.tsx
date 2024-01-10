@@ -5,6 +5,9 @@ import axios from "axios";
 import Image from "next/image";
 import notAlbum from "../assets/NoAlb.png";
 import dota from "../assets/dota2.png"
+import roblox from "../assets/roblox.png"
+import unknown from "../assets/unknown.png"
+
 import { Tooltip } from "@chakra-ui/react";
 
 import { Activity } from "./lanyard-data.interface";
@@ -37,12 +40,19 @@ const Active: FC<{ activity: Activity }> = (props) => {
 
   const finalTime = hours + ":" + minutes + ":" + seconds;
 
+
+  const [games, setGames] = useState([
+    {id: 1, title: 'Dota 2', img: dota},
+    {id: 2, title: 'Roblox', img: roblox},
+
+  ])
+
   return (
     <>
     {
       props.activity.name == "Spotify" ? undefined :
       (props.activity ? (
-        <p className=" uppercase text-gray-600 pl-2 pb-2 font-bold">
+        <p className=" uppercase text-gray-600 pl-1 pb-2 font-bold">
           Playing a game
         </p>
       ) : undefined)
@@ -51,7 +61,13 @@ const Active: FC<{ activity: Activity }> = (props) => {
       <div className="flex items-center sm:flex-row cursor-pointer w-full mb-3 sm:px-0 px-2">
         <div className="rounded-[10px] bg-[#141414] relative">
           {/* ======МОЖНО ОПТИМИЗИРОВАТЬ========== */}
+          
           {props.activity.name == "Dota 2" ? (
+            <Tooltip
+                label={`${props.activity.name}`}
+                placement="top"
+                hasArrow
+              >
             <Image
               className="rounded-[10px] sm:w-[125px] w-full"
               width={100}
@@ -59,6 +75,7 @@ const Active: FC<{ activity: Activity }> = (props) => {
               alt="No img"
               src={dota}
             />
+            </Tooltip>
           ) : (
             undefined
           )}
@@ -90,7 +107,13 @@ const Active: FC<{ activity: Activity }> = (props) => {
               />
             )
           ) : (
-            undefined
+            <Image
+                className="rounded-[10px] sm:w-[125px] w-full"
+                width={100}
+                height={100}
+                alt="No img"
+                src={unknown}
+              />
           ))}
           
 

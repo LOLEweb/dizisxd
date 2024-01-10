@@ -1,6 +1,6 @@
 import { Icon } from '@chakra-ui/react'
 import { IoLogoDiscord } from "react-icons/io5";
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaSpotify } from "react-icons/fa";
 import { FaTelegram } from "react-icons/fa6";
 import React from 'react'
 
@@ -12,6 +12,7 @@ const Footer = () => {
         <a className='hover:backdrop-brightness-200 duration-200 p-2' target='_blank' href="https://discord.com/users/835837384297545748"><IoLogoDiscord size={25}/></a>
         <a className='hover:backdrop-brightness-200 duration-200 p-2' target='_blank' href="https://github.com/LOLEweb"><FaGithub size={25}/></a>
         <a className='hover:backdrop-brightness-200 duration-200 p-2' target='_blank' href="https://t.me/diziSXDD"><FaTelegram size={25}/></a>
+        <a className='hover:backdrop-brightness-200 duration-200 p-2' target='_blank' href="https://open.spotify.com/user/i1jvcdso603m9abrd902vgwmo"><FaSpotify size={25}/></a>
       </div>
     </div>
   )

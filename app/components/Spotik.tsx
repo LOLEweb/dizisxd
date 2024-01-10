@@ -6,6 +6,9 @@ import Image from "next/image";
 import { Root } from "./lanyard-data.interface";
 import axios from "axios";
 import { Tooltip } from "@chakra-ui/react";
+import { FaSpotify } from "react-icons/fa";
+import Link from "next/link";
+
 
 const Spotik = () => {
   const [data, setData] = useState<Root>();
@@ -25,10 +28,11 @@ const Spotik = () => {
   }
   return (
     <>
-    <p className=" uppercase text-gray-600 pl-2 pb-2 font-bold">
-          Listening to
-        </p>
-      <div className="flex items-center sm:flex-row cursor-pointer w-full mb-3 sm:px-0 px-2 flex-col">
+    <div className=" uppercase text-gray-600 pl-1 pb-2 font-bold flex gap-2 items-center">
+          Listening to <FaSpotify size={18} />
+    </div>
+    <Link target="_blank" href={`https://open.spotify.com/track/69Z09nI41T3HPRYWWXbFKQ?si=${data?.data.spotify.track_id}`}>
+      <div className="flex items-center sm:flex-row cursor-pointer w-full mb-3 sm:px-0 px-2 hover:backdrop-brightness-200 duration-200 rounded-xl">
         <div className="rounded-[10px] bg-[#141414] relative sm:mb-0 mb-2">
 
             {data?.data.spotify ? 
@@ -43,6 +47,7 @@ const Spotik = () => {
             {data?.data.spotify ? <p>Artist: <span className=" no-underline">{data.data.spotify.artist}</span></p> : undefined}
         </div>
       </div>
+      </Link>
     </>
   );
 };
