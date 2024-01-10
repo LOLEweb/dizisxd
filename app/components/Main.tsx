@@ -98,9 +98,9 @@ const Main = () => {
             </div>
           </div>
           <div className="bg-[#141821] rounded-[10px] p-3 mt-3 w-full sm:max-w-[500px]">
-            {data?.data.activities ? <Activities activities={data?.data.activities}/> : <Spotik />}
+            {data?.data.activities && <Activities activities={data?.data.activities}/>}
+            {data?.data.listening_to_spotify ? <Spotik /> : undefined}
           </div>
-          
           
         </div>
       </main>

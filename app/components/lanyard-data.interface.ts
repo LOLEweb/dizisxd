@@ -5,6 +5,7 @@ export interface Root {
 
 export type DiscordStatus = "online" | "idle" | "dnd" | "offline"
 
+
 export interface Data {
   kv: Kv
   spotify: Spotify
@@ -46,18 +47,18 @@ export interface DiscordUser {
 }
 
 export interface Activity {
-  flags: number
-  id: string
+  flags?: number
+  id?: string
   name: string
-  type: number
-  state: string
-  session_id: string
-  details: string
-  timestamps: Timestamps2
+  type?: number
+  state?: string
+  session_id?: string
+  details?: string
+  timestamps?: Timestamps2
   assets: Assets
-  sync_id: string
-  created_at: number
-  party: Party
+  sync_id?: string
+  created_at?: number
+  party?: Party
 }
 
 export interface Timestamps2 {
@@ -66,10 +67,10 @@ export interface Timestamps2 {
 }
 
 export interface Assets {
-  small_text: any
-  small_image: any
-  large_image: string
-  large_text: string
+  small_text?: any
+  small_image?: any
+  large_image?: string
+  large_text?: string
 }
 
 export interface Party {
