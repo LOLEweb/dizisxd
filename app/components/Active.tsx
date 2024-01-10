@@ -107,13 +107,7 @@ const Active: FC<{ activity: Activity }> = (props) => {
               />
             )
           ) : (
-            <Image
-                className="rounded-[10px] sm:w-[125px] w-full"
-                width={100}
-                height={100}
-                alt="No img"
-                src={unknown}
-              />
+            undefined
           ))}
           
 
