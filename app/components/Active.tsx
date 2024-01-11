@@ -62,24 +62,7 @@ const Active: FC<{ activity: Activity }> = (props) => {
         <div className="rounded-[10px] bg-[#141414] relative">
           {/* ======МОЖНО ОПТИМИЗИРОВАТЬ========== */}
           
-          {props.activity.name == "Dota 2" ? (
-            <Tooltip
-                label={`${props.activity.name}`}
-                placement="top"
-                hasArrow
-              >
-            <Image
-              className="rounded-[10px] sm:w-[125px] w-full"
-              width={100}
-              height={100}
-              alt="No img"
-              src={dota}
-            />
-            </Tooltip>
-            
-          ) : (
-            undefined
-          )}
+          
           {/* ================================= */}
 
           {props.activity.name == "Spotify" ? undefined :
@@ -91,7 +74,7 @@ const Active: FC<{ activity: Activity }> = (props) => {
                 hasArrow
               >
                 <Image
-                  className="rounded-[10px] sm:w-[125px] w-full"
+                  className="rounded-[10px] min-w-[125px] w-full"
                   width={100}
                   height={100}
                   alt="No img"
@@ -108,7 +91,13 @@ const Active: FC<{ activity: Activity }> = (props) => {
               />
             )
           ) : (
-            undefined
+            <Image
+                className="rounded-[10px] min-w-[125px] w-full"
+                width={100}
+                height={100}
+                alt="No img"
+                src={unknown}
+              />
           ))}
           
 
