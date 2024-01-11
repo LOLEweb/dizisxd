@@ -26,6 +26,11 @@
   font-weight: bold;
 }
 
+.russia {
+  background-image: url(../app/assets/russia.jpg);
+  height: 100vh;
+}
+
 .logo:hover {
   background-color: #fff;
 }
