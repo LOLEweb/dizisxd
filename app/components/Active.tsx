@@ -76,6 +76,7 @@ const Active: FC<{ activity: Activity }> = (props) => {
               src={dota}
             />
             </Tooltip>
+            
           ) : (
             undefined
           )}
@@ -150,6 +151,7 @@ const Active: FC<{ activity: Activity }> = (props) => {
             (props.activity ? (
             <p className="py-1">{props.activity.details}</p>
           ) : undefined)}
+          {props.activity.name == "Dota 2" ? <p className="py-1">Game Mode: Turbo</p> : undefined}
           {props.activity.name == "Spotify" ? undefined : 
             (props.activity ? <p>{props.activity.state}</p> : undefined)
           }
