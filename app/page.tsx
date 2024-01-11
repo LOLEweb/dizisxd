@@ -8,10 +8,11 @@ export default function Home() {
   return (
     // https://ellw.art/ - ref
     <>
-      <div className='bg-[#1a202c] min-h-screen flex flex-col'>
+      <div className='bg-gradient-to-r from-[#102333] via-[#183a62] to-[#102333] min-h-screen flex flex-col'>
         <Header />
         <Main />
         <Footer />
+        
       </div>
     </>
   )

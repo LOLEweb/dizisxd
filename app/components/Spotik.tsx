@@ -32,7 +32,7 @@ const Spotik = () => {
           Listening to <FaSpotify size={18} />
     </div>
     <Link target="_blank" href={`https://open.spotify.com/track/${data?.data.spotify.track_id}?si=1f85dbe540824269`}>
-      <div className="flex items-center sm:flex-row cursor-pointer w-full mb-3 sm:px-0 px-2 hover:backdrop-brightness-200 duration-200 rounded-xl">
+      <div className="flex items-center sm:flex-row cursor-pointer w-full mb-3 sm:px-0 px-2 hover:backdrop-brightness-200 duration-200 rounded-xl z-50">
         <div className="rounded-[10px] bg-[#141414] relative sm:mb-0 mb-2">
 
             {data?.data.spotify ? 

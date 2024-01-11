@@ -81,7 +81,7 @@ const Main = () => {
                 <span className="nick">dizisxd</span>.
               </p>
               <p>
-                I m a software/web developer from Russia who s{" "}
+                Im a software/web developer from Russia who s{" "}
                 <Tooltip
                   placement="top"
                   hasArrow
@@ -93,11 +93,13 @@ const Main = () => {
               </p>
               <p>
                 You can find more info in{" "}
-                <a className=" font-semibold cursor-pointer">/about</a>.
+                <Link href={'./about'} legacyBehavior>
+                  <a className=" font-semibold cursor-pointer">/about</a>
+                </Link>.
               </p>
             </div>
           </div>
-          <div className="bg-[#141821] rounded-[10px] p-3 mt-3 w-full sm:max-w-[500px]">
+          <div className="backdrop-blur-3xl bg-[#141414]/50 rounded-[10px] p-3 mt-3 w-full sm:max-w-[500px]">
             {data?.data.activities && <Activities activities={data?.data.activities}/>}
             {data?.data.listening_to_spotify ? <Spotik /> : undefined}
           </div>
