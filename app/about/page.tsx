@@ -22,9 +22,9 @@ export default function About() {
                   />
               </div>
               <p className="p-3 text-lg">
-                Hello, my name is Dmitry, I'm from Russia and a website
-                developer. I'm 17 years old and have 1 year of experience in
-                development. I am from a small town and my goal is to become a Senior Developer in some large IT company. This site is completely about me and here you can
+                Hello, my name is Dmitry, I&apos;m from Russia and a website
+                developer. I am 17 years old and have 1 year of experience in
+                development. I&apos;m from a small town and my goal is to become a Senior Developer in some large IT company. This site is completely about me and here you can
                 learn a little more about me and my skills. You can learn more
                 about my skills here{" "}
                 <Link href={"./skills"} legacyBehavior>
