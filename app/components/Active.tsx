@@ -58,7 +58,7 @@ const Active: FC<{ activity: Activity }> = (props) => {
       ) : undefined)
     }
       
-      <div className="flex items-center sm:flex-row cursor-pointer w-full mb-3 sm:px-0 px-2">
+      <div className="flex items-center cursor-text sm:flex-row w-full mb-3 sm:px-0 px-2">
         <div className="rounded-[10px] bg-[#141414] relative">
           {/* ======МОЖНО ОПТИМИЗИРОВАТЬ========== */}
           

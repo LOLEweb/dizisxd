@@ -8,6 +8,15 @@
 }
 
 /* .background__gif {
+  background: url(../app/assets/pixel.gif);
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+} */
+
+/* .background__gif {
   height: 100%; 
   background:#000 url(../app/assets/pixel.gif) no-repeat top left;
 } */

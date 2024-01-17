@@ -8,7 +8,7 @@ import notAlbum from "../assets/NoAlb.png";
 const Activities:FC<{activities:Data["activities"]}> = (props) => {
 
   if (!props.activities.length) {
-    return <Active activity={{name: "No activity 😴", assets: {large_image: "../assets/unknown.png"}}} />
+    return <Active activity={{name: "No activity 😴"}} />
   }
 
   return (

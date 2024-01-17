@@ -55,7 +55,7 @@ export interface Activity {
   session_id?: string
   details?: string
   timestamps?: Timestamps2
-  assets: Assets
+  assets?: Assets
   sync_id?: string
   created_at?: number
   party?: Party

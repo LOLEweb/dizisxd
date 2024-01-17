@@ -10,6 +10,7 @@ import Link from "next/link";
 import Active from "./Active";
 import Activities from "./Activities";
 
+
 const status = (status: DiscordStatus | undefined) => {
   switch (status) {
     case "online":
@@ -81,15 +82,14 @@ const Main = () => {
                 <span className="nick">dizisxd</span>.
               </p>
               <p>
-                Im a software/web developer from Russia who s{" "}
+                Im a frontend developer from Russia who s{" "}
                 <Tooltip
                   placement="top"
                   hasArrow
                   label={fractionOfYear.toFixed(6)}
                 >
                   <span>17 years old</span>
-                </Tooltip>{" "}
-                and has been coding for over <span>2 years</span>.
+                </Tooltip>.
               </p>
               <p>
                 You can find more info in{" "}
@@ -103,7 +103,7 @@ const Main = () => {
             {data?.data.activities && <Activities activities={data?.data.activities}/>}
             {data?.data.listening_to_spotify ? <Spotik /> : undefined}
           </div>
-          
+      
         </div>
       </main>
     </>
